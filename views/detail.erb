@@ -1,0 +1,12 @@
+<h2><%= h(@memo[:title]) %></h2>
+<div class="memo_body">
+  <p><%= h(@memo[:body]) %></p>
+</div>
+
+<div class="flex_box">
+  <a class="btn" href="/memos/edit/<%= @memo[:id] %>">変更</a>
+  <form method="post" action="/memos/<%= @memo[:id] %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" class="btn delete_btn" value="削除">
+  </form>
+</div>

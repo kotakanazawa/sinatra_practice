@@ -1,0 +1,76 @@
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  background-color: #F7F7F8;
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 5px 20px 15px;
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 24px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 a:visited {
+  clear: inherit;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.form {
+  font-size: 18px;
+  width: 70%;
+  padding: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.body_form {
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-size: 14px;
+  color: #fff;
+  background: #5876a3;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.delete_btn {
+  padding: 6px 11px;
+  cursor: pointer;
+}
+
+.memo_body {
+  padding-bottom: 10px;
+}
+
+.flex_box {
+  display: flex;
+  justify-content: space-around;
+}
