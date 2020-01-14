@@ -31,37 +31,37 @@ helpers do
   end
 end
 
-get '/memos' do
+get "/memos" do
   files = Dir.glob("model/*").sort_by { |f| File.mtime(f) }
   @memos = files.map { |file| JSON.parse(File.read(file), symbolize_names: true) }
   erb :memos
 end
 
-get '/memos/new' do
+get "/memos/new" do
   erb :new
 end
 
-post '/memos/new' do
+post "/memos/new" do
   Memo.create(title: params[:title], body: params[:body])
   redirect to("/memos")
 end
 
-get '/memos/:id' do
+get "/memos/:id" do
   @memo = Memo.find_by_id(id: params[:id])
   erb :detail
 end
 
-get '/memos/edit/:id' do
+get "/memos/edit/:id" do
   @memo = Memo.find_by_id(id: params[:id])
   erb :edit
 end
 
-patch '/memos/:id' do
+patch "/memos/:id" do
   Memo.new.edit(id: params[:id], title: params[:title], body: params[:body])
   redirect to("/memos/#{params[:id]}")
 end
 
-delete '/memos/:id' do
+delete "/memos/:id" do
   Memo.new.destroy(id: params[:id])
   redirect to("/memos")
 end
